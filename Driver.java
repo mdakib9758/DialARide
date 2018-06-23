@@ -15,5 +15,12 @@ public class Driver {
 	public static void main(String []args) throws IOException{
 		ReadInput ri=new ReadInput();
 		ri.reading();
+		SortRequest so=new SortRequest();
+		so.sort(ri.getReq());
+		 Dijkastras di=new Dijkastras();
+		for(int i=0;i<ri.getN();i++){
+			 di.dij(ri.getLocation(),ri.getN(),i);
+		 }
+
 	}
 }
